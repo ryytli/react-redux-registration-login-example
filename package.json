@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server -p --public localhost:8080 --host 0.0.0.0 --port 8080"
   },
   "dependencies": {
     "history": "^4.6.3",

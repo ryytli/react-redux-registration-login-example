@@ -1,4 +1,4 @@
-FROM ryytli/asprakendus:v1
+FROM ryytli/asprakendus
 
 FROM node
 WORKDIR /source
