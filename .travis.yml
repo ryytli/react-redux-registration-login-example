@@ -1,5 +1,10 @@
 language: node_js
   - "stable"
+before_install:
+  - echo "BEFORE INSTALL START"
+  - gem install bundler
+  - echo "BEFORE INSTALL END"
+
 env:
   - NODE_ENV="development"
   - NODE_ENV="Production"
@@ -10,5 +15,5 @@ services:
   - docker
 script: 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t $DOCKER_USERNAME/reactapp:v2 .
-  - docker push $DOCKER_USERNAME/reactapp:v2
+  - docker build -t $DOCKER_USERNAME/reactapp:v3 .
+  - docker push $DOCKER_USERNAME/reactapp:v3
