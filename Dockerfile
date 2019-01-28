@@ -1,6 +1,6 @@
-FROM ryytli/aspnet
+FROM ryytli/aspnet 
 
-FROM node
+FROM node 
 WORKDIR /source
 COPY package*.json ./
 RUN npm install
